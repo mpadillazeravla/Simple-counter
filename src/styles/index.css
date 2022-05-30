@@ -1,12 +1,41 @@
 
-/* 
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.container {
+    display: flex;
+    color: red;
+    justify-content: center;
+    padding-top: 20px;
+    align-items: center;
+    font-size: 40px;
+    margin-top: 200px;
+    font-weight: bold ;
+    width: 1000px;
+    height: 100px;
+    position: relative;
+}
 
-*/
+body {
+    background-color: black;
+    background-image: url("https://i.pinimg.com/originals/66/2e/46/662e46f6697d55a4435d9c9082983508.gif");
+    background-position: center;
+    box-sizing: border-box;
+    object-fit: fill;
+    background-size: cover;
+}
+
+span {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.fa-solid{
+    width: 40px;
+    height: 50px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+}

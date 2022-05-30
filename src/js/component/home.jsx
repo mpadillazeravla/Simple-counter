@@ -1,25 +1,33 @@
 import React from "react";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-const Home = () => {
+import SecondsCounter from "./SecondsCounter.jsx";
+
+// Aqui tenemos home , que recupera de secondscounter y manda los props a index.js
+
+const Home = (props) => {
 	return (
-		<div>
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+		<>
+			<div className="container">
+				<i className="fa-solid fa-clock"></i>
+				<h1></h1>
+				<SecondsCounter seconds={props.dmiles} />
+				<SecondsCounter seconds={props.miles} />
+				<SecondsCounter seconds={props.centenas} />
+				<SecondsCounter seconds={props.decenas} />
+				<SecondsCounter seconds={props.segundos} />
+			</div>
+			<div className="boton">
+				<button
+					type="button"
+					className="btn btn-success"
+					onClick={props.reseteo}>
+					Reset
+				</button>
+			</div>
+		</>
+		// tenemos el boton para hacer reset , que manda los props a home
 	);
 };
 
